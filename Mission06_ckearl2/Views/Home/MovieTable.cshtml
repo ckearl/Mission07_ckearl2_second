@@ -11,6 +11,8 @@
     <thead>
         <tr class="font-weight-bold">
             <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Director</th>
             <th scope="col">Rating</th>
             <th scope="col">Edited</th>
             <th scope="col">Lent To</th>
@@ -23,16 +25,18 @@
 
         @foreach (var item in Model)
             {
-                <tr>
-                    <td scope="row">@item.Title</td>
-                    <td>@item.Rating</td>
-                    <td>@item.Edited</td>
-                    <td>@item.LentTo</td>
-                    <td>@item.Notes</td>
-                    <td>@item.Category.CategoryName</td>
-                    <td><a asp-controller="Home" asp-action="EditMovie" asp-route-movieid="@item.MovieID">Edit</a></td>
-                    <td><a asp-controller="Home" asp-action="DeleteMovie"asp-route-movieid="@item.MovieID">Delete</a></td>
-                </tr>
+        <tr>
+            <td scope="row">@item.Title</td>
+            <td>@item.Year</td>
+            <td>@item.Director</td>
+            <td>@item.Rating</td>
+            <td>@item.Edited</td>
+            <td>@item.LentTo</td>
+            <td>@item.Notes</td>
+            <td>@item.Category.CategoryName</td>
+            <td><a asp-controller="Home" asp-action="EditMovie" asp-route-movieid="@item.MovieID">Edit</a></td>
+            <td><a asp-controller="Home" asp-action="DeleteMovie" asp-route-movieid="@item.MovieID">Delete</a></td>
+        </tr>
             }
 
     </tbody>

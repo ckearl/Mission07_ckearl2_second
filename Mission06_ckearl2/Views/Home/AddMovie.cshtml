@@ -14,6 +14,16 @@
                 <input asp-for="Title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie Title...">
             </div>
             <div class="col-md-6">
+                <label asp-for="Year" for="Year" class="form-label">Year Released</label>
+                <input asp-for="Year" type="number" class="form-control" id="Year" placeholder="0000">
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Director" for="Director" class="form-label">Director</label>
+                <input asp-for="Director" type="text" class="form-control" id="Director" placeholder="Director">
+            </div>
+            <div class="col-md-6">
                 <label asp-for="Rating" for="exampleFormControlInput2" class="form-label">Rating (Select one)</label>
                 <select asp-for="Rating" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Rating...">
                     <option value="G">G</option>

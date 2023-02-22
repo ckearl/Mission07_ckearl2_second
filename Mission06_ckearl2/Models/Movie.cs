@@ -14,6 +14,8 @@ namespace Mission06_ckearl2.Models
 
         [Required(ErrorMessage = "Movie Title is a required field")]
         public string Title { get; set; }
+        public int Year { get; set;}
+        public string Director { get; set;}
 
         [Required(ErrorMessage = "Rating is a required field")]
         public string Rating { get; set; }
